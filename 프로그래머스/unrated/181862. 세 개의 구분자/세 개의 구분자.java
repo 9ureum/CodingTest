@@ -3,9 +3,7 @@ import java.util.*;
 class Solution {
     public String[] solution(String myStr) {
         List<String> list = new ArrayList<>();
-        String tmp = "";
-        tmp = myStr.replaceAll("[a,b,c]"," ");
-        String[] tmparr = tmp.split(" ");
+        String[] tmparr = myStr.split("[a,b,c]+");
         for(String t : tmparr) {
             if (!t.equals("")) {
                 list.add(t);
